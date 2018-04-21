@@ -7,8 +7,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    message:'',
-    message2:'',
+    message:'专注工作',
+    message2:'专注工作',
     focusTime:'',
     num:'',
     thing:'',
