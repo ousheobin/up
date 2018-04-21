@@ -1,0 +1,23 @@
+<!-- home.wxml -->
+<view class="wrap {{_num == 1?'choice-blue':'choice-pink'}}" data-num = '1'>
+    <view class="sele-color">
+      <view class="blue" bindtap="blueClick"></view>
+      <view class="pink" bindtap="pinkClick"></view>
+    </view>
+    <image class="head-portrait {{_num == 1?'blue-head':'pink-head'}}" data-num = '1' src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname {{_num == 1?'blue-nickname':'pink-nickname'}}" data-num = '1'>Hi,{{userInfo.nickName}}</text>
+    <input class="input {{_num == 1?'blue-input':'pink-input'}}" data-num = '1' name="event"   value='{{message}}' bindfocus="thingFocus" bindblur="thingBlur" bindinput="thingInput" />
+    <button class="time-btn {{_num == 1?'blue-btn':'pink-btn'}}" data-num = '1' bindtap="startUp">Up一下</button>
+    <text class="up-time">Up时间：30分钟</text>
+    <view class="work-situation" bindtap="weekSummary">
+      <text class="survey {{_num == 1?'blue-survey':'pink-survey'}}" data-num = '1'>本周Up概况</text>
+      <view class="foucs-time">
+        <text class="first-text">本周专注工作了</text>
+        <text class="second-text">\n{{focusTime}}</text>
+      </view>
+      <view class="give-up">
+        <text class="first-text">本周完成了</text>
+        <text class="second-text">\n{{num}}次</text>
+      </view>
+    </view> 
+</view>

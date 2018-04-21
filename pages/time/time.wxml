@@ -1,0 +1,12 @@
+<!-- time.wxml -->
+<view class="wrap {{_num == 1?'blue':'pink'}}" data-num = '1'>
+  <text class="remaining-time">剩余时间</text>
+  <text class="time">{{clock}}</text>
+  <text class="tips">离开此页面也算放弃哦~</text>
+  <!-- <button class="giveup-btn"></button>   -->
+  <image class="give-up" bindtap="clickGiveUp" src='img/out_button.png'></image>
+  <!--<view bindtap="transform"  class="out">
+      <view class="left" id="leftCircle"></view>   
+      <view class="right"></view>      
+  </view> -->
+</view>

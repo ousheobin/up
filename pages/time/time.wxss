@@ -1,0 +1,77 @@
+/* time.wxss */
+.wrap{
+  height: 100%;
+  text-align: center;
+  /* color: #ffc0c5; */
+  /* color: #9dcec3; */
+}
+.pink {
+  color: #ffc0c5;
+}
+.blue {
+  color: #a4f2e0;
+}
+
+.remaining-time{
+  display: inline-block;
+  margin-top:25%;
+  font-size: 50rpx;
+   /* color: #ffc0c5;  */
+  /* color: #9dcec3; */
+}
+.time{
+  display: block;
+  margin: 5% 0;
+  font-size: 180rpx;
+   /* color: #f8bdbe;   */
+  /* color: #9dcec3; */
+}
+/* .giveup-btn{
+  width: 200rpx;
+  height: 200rpx;
+  background-color: #fff;
+  border-color: #fff;
+} */
+.tips{
+  display: inline-block;
+  margin-bottom: 10%;
+  font-size: 40rpx;
+   /* color: #ffa4b2;  */
+  /* color: #9dcec3; */
+}
+.give-up{
+  display: block;
+  margin: 0 auto;
+  width: 250rpx;
+  height: 250rpx;
+}
+
+  /* .out{
+  position: relative;
+  width: 400rpx;
+  height: 400rpx;
+  border: 20rpx solid gray;
+  border-radius: 50%;
+}
+.left,.right{
+  width: 400rpx;
+  height: 400rpx;
+  border: 20rpx solid red;
+  border-radius: 50%;
+}
+.left{
+  position: absolute;
+  top: -18rpx;
+  left: -18rpx;
+  z-index: 1;
+  border-color: transparent transparent red red;
+  transform: rotate(45deg);
+}
+.right{
+  position: absolute;
+  top: -18rpx;
+  left: -18rpx;
+  z-index: 2;
+  border-color: red red transparent transparent;
+  transform: rotate(45deg);
+}   */

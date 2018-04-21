@@ -1,0 +1,40 @@
+<!--up.wxml-->
+<view class="wrap {{_num == 1?'blue':'pink'}}" data-num = '1'>
+  <view class="show-box">
+    <text class="show-name">本周概括</text>
+    <view class="box {{_num == 1?'blue-box':'pink-box'}}" data-num = '1'>
+      <view class="cancel {{_num == 1?'blue-cancel':'pink-cancel'}}" data-num = '1'>本周完成任务的次数为<text>{{finishTime}}</text>次</view>
+      <view class="tr">
+        <view class="thtd th {{_num == 1?'blue-th':'pink-th'}}" data-num = '1'>Date</view>
+        <view class="thtd-2 th-2 {{_num == 1?'blue-th2':'pink-th2'}}" data-num = '1'>Up-Time</view>
+      </view>
+      <view class="main">
+          <view wx:for="{{summarytArraies}}" wx:for-item="summarytArray" wx:key="time" class="tr">
+            <view class="thtd {{_num == 1?'blue-td blue-thtd':'pink-td pink-thtd'}}" data-num = '1'>{{summarytArray.date}}</view>
+            <view class="thtd-2 {{_num == 1?'blue-td':'pink-td'}}">{{summarytArray.minutes}}</view>
+          </view>
+      </view> 
+    </view>
+  </view>
+  <view class="history">
+    <text class="txt-history">历史记录</text>
+    <view class="pre-show {{_num == 1?'blue-show':'pink-show'}}" data-num = '1'>
+      <view class="head-p">
+        <view class="">周期</view>
+        <view class="">时间</view>
+      </view>
+      <view class="main-p">
+        <!-- <view class="tr year">2018年</view> -->
+        <view class="tr">
+          <view data-text="{{hisArray.beginDate}}" bindtap="seeSummary" wx:for="{{hisArraies}}" wx:for-item="hisArray" wx:key="his" class="block-d">
+            <view class="th-p thtd-p">{{hisArray.displayText}}</view>
+            <view class="td-p">{{hisArray.totalTime}}</view>
+            <view style="display:none">{{hisArray.beginDate}}</view>
+            <!-- 36h -->
+          </view>          
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+

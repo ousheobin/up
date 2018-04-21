@@ -1,0 +1,90 @@
+/*finish.wxss*/
+.userinfo {
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  /* border: 1px solid green; */
+  /* color: #ffa4b2; */
+  /* color: #9dcec3; */
+}
+.pink {
+  color: #ffa4b2;
+}
+.blue {
+  color: #a4f1e4;
+}
+
+.container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* border: 1px solid red; */
+}
+
+ .txt-small {
+   margin-top: 15rpx;
+  font-size: 15px;
+
+} 
+
+.done-text {
+  margin: 250rpx 0 50rpx 0;
+  font-size: 20px;
+}
+
+.userinfo-avatar {
+  position: absolute;
+  top: 70rpx;
+  width: 300rpx;
+  height: 300rpx;
+  line-height: 300rpx;
+   /* margin: 0;  */
+  /* text-align: center; */
+  font-size: 60px;
+  font-weight: lighter;
+  /* border: 1px solid black; */
+  border-radius: 50%;
+  /* background-color: #f8bdbe; */
+  /* background-color: #9dcec3; */
+  color: #fff;
+}
+.pink-ua {
+  background-color: #f8bdbe;
+}
+.blue-ua {
+  background-color: #a4f1e4;
+}
+
+.return {
+  position: absolute;
+  top: 800rpx;
+  left: 50%;
+  margin-left: -45%;
+  width: 90%;
+  height: 100rpx;
+  line-height: 100rpx;
+  /* border: 1px solid black; */
+  border-radius: 5px;
+  color: #fff;
+  /* background-color: #f8bdbe; */
+  /* background-color: #9dcec3; */
+}
+.pink-return {
+  background-color: #f8bdbe;
+}
+.blue-return {
+  background-color: #a4f2e0;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.input-txt {
+  border:1px solid red;
+}
+
+.usermotto {
+  margin-top: 200px;
+}

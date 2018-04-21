@@ -1,0 +1,21 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo {{_num == 1?'blue':'pink'}}" data-num = '1'>
+    <block>
+      <!-- <view class="return"></view> -->
+      <!-- <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image> -->
+      <view class="userinfo-avatar {{_num == 1?'blue-ua':'pink-ua'}}" data-num = '1'>
+        <text class="comp-time">{{upTime}}</text>
+        <text class="txt-small">min</text>
+      </view>
+      <!-- <text class="userinfo-nickname">{{userInfo.nickName}}</text> -->
+      <text class="done-text">时间到啦，小憩一会吧~</text>
+      <text class="txt-small">本周您累计专注工作了</text>
+      <text class="txt-small"><text class="week-time">{{weekTime}}</text></text>
+    </block>
+    <view bindtap="bindReturnTap" class="return {{_num == 1?'blue-return':'pink-return'}}" data-num = '1'>返回首页</view>
+  </view>
+  <view class="usermotto">
+    <!-- <text class="user-motto">{{motto}}</text> -->
+  </view>
+</view>

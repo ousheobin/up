@@ -1,0 +1,14 @@
+{
+  "pages":[
+    "pages/home/home",
+    "pages/up/up",
+    "pages/time/time",
+    "pages/finish/finish"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Up一下",
+    "navigationBarTextStyle":"#fff"
+  }
+}
