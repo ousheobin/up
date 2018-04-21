@@ -77,6 +77,13 @@ Page({
     weekSummary(that, e.currentTarget.dataset.text);
   },
 
+  onShareAppMessage: function () {
+    return {
+      title: '一起专注工作，Day day up',
+      imageUrl: 'https://508cst.gcu.edu.cn/commons-up/share.jpg'
+    }
+  },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

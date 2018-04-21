@@ -111,6 +111,12 @@ Page({
       }
     })
   },
+  onShareAppMessage: function () {
+    return {
+      title: '一起专注工作，Day day up',
+      imageUrl: 'https://508cst.gcu.edu.cn/commons-up/share.jpg'
+    }
+  },
   getUserInfo: function (e) {
     console.log(e)
     app.globalData.userInfo = e.detail.userInfo

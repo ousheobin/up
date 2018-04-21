@@ -129,12 +129,6 @@ Page({
    
   },
 
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
- 
-
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -193,50 +187,35 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    
-  },
-  // getUserInfo: function(e) {
-  //   console.log(e)
-  //   app.globalData.userInfo = e.detail.userInfo
-  //   this.setData({
-  //     userInfo: e.detail.userInfo,
-  //     hasUserInfo: true
-  //   })
-  // },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-    
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-    
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-    
+    wx.request({
+      url: 'https://508cst.gcu.edu.cn/up/wechat/welcome/summary',
+      data: {
+        userId: wx.getStorageSync('userId'),
+        sessionKey: wx.getStorageSync('wxSessionKey')
+      },
+      header: {
+        'content-type': 'application/json'
+      },
+      success: res => {
+        if (res.statusCode == 200 && res.data.status == "ok") {
+          defaultEvent = res.data.hints;
+          this.setData({
+            message: res.data.hints,
+            message2: res.data.hints,
+            focusTime: res.data.countData.finish,
+            num: res.data.countData.finishTime
+          })
+          wx.hideLoading();
+        }
+      }
+    })
   },
 
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-    
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
   onShareAppMessage: function () {
-    
+    return {
+      title: '一起专注工作，Day day up',
+      imageUrl: 'https://508cst.gcu.edu.cn/commons-up/share.jpg'
+    }
   },
 
   initInfo: function(){
