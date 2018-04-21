@@ -18,10 +18,10 @@ App({
 
   login: function () {
     this.globalData.initPromise = new Promise((resolve, reject) => {
-      // wx.showLoading({
-      //   title: '正在获取数据',
-      //   mask: true
-      // })
+      wx.showLoading({
+        title: '正在获取数据',
+        mask: true
+      })
       wx.login({
         success: result => {
           wx.request({
@@ -93,7 +93,8 @@ App({
     recordId:'',
     thisTime:'30',
     initPromise:null,
-    colorNum:'1'
+    colorNum:'1',
+    title:''
   }
 
 })

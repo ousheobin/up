@@ -52,6 +52,7 @@ Page({
         thing:defaultEvent
       })
     }
+    app.globalData.title = this.data.thing;
     wx.request({
       url: 'https://508cst.gcu.edu.cn/up/wechat/records/add_record',
       data:{

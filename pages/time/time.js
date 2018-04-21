@@ -10,6 +10,7 @@ function time(that,minute,second){
     wx.setKeepScreenOn({
       keepScreenOn: false
     })
+    wx.vibrateLong();
     that.setData({
       clock: '0' + min + ':' + '0'+ sec
     });
@@ -152,7 +153,8 @@ Page({
    */
   data: {
     clock: '',
-    _num: app.globalData.colorNum
+    _num: app.globalData.colorNum,
+    brightness: 1.0
   },
   clickGiveUp:function(){
     giveUp();
@@ -169,6 +171,9 @@ Page({
    */
   onLoad: function (options) {
     var that = this;
+    wx.setNavigationBarTitle({
+      title: app.globalData.title,
+    })
     time(that, app.globalData.thisTime,0);
   },
 
@@ -202,6 +207,18 @@ Page({
     wx.setKeepScreenOn({
       keepScreenOn: true
     })
+    wx.getScreenBrightness({
+      success: res => {
+        this.setData({
+          brightness: res.value
+        })
+      }
+    });
+    if (this.data.brightness > 0.6) {
+      wx.setScreenBrightness({
+        value: 0.6,
+      })
+    }
   },
 
   /**
@@ -210,14 +227,19 @@ Page({
   onHide: function () {
     clearTimeout(timer);
     finishStatus(false);
+    console.log('恢复亮度:' + this.data.brightness);
+    wx.setScreenBrightness({
+      value: this.data.brightness,
+    })
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-    
+    console.log('恢复亮度:' + this.data.brightness);
+    wx.setScreenBrightness({
+      value: this.data.brightness,
+    })
   },
-
-
 })
